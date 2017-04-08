@@ -1,27 +1,36 @@
 import React, { Component, PropTypes } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as Actions from 'actions';
 
 // Доп. компоненты
-import Grid from 'containers/List';
-import Form from 'containers/Form'
+import List from 'containers/List/List';
+import ItemWithImage from 'containers/List/ItemWithImage';
+import Form from 'containers/Form';
 
 class Main extends Component {
 
     render() {
         const { store: {reducers: {beers, favoriteBeers}}, dispatch, className } = this.props;
+        const actions = bindActionCreators(Actions, dispatch);
+
         return (
-            <div className=className>
+            <div className={className}>
                 <Form className={'search-form'}/>
+                <List className={'list'}>
                 {
                     beers.map((beer, idx) => {
                         return (
-                            <List.ItemWithImage
+                            <ItemWithImage
                             key={idx}
-                            className={'item item-with-image'}>
-                            {beer}
-                            </List.item>
+                            className={'item item_with_image'}
+                            addFavorite={actions.addFavorite}>
+                                {beer}
+                            </ItemWithImage>
                         );
                     })
                 }
+                </List>
             </div>
         );
     }

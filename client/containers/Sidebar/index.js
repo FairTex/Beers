@@ -14,7 +14,7 @@ class Sidebar extends Component {
         const { store: {reducers: {beers, favoriteBeers}}, dispatch, className } = this.props;
         const actions = bindActionCreators(Actions, dispatch);
         return (
-            <div className=className>
+            <List className={className}>
             {
                 favoriteBeers.map((beer, idx) => {
                     return (
@@ -26,7 +26,7 @@ class Sidebar extends Component {
                     );
                 })
             }
-            </div>
+            </List>
         );
     }
 }
