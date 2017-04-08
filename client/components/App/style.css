@@ -1,6 +1,16 @@
-.viewport {
+
+#root {
+    width: 100vw;
+    border: 1px solid yellow;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    width: 100vw;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
     border: 1px solid black;
 }

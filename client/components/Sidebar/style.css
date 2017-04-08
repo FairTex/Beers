@@ -3,5 +3,5 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
-    width: 40%;
+    flex-basis: 40%;
 }

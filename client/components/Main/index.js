@@ -5,8 +5,10 @@ import * as Actions from 'actions';
 
 // Доп. компоненты
 import List from 'components/List/List';
-//import ItemWithImage from 'components/List/ItemWithImage';
 import Form from 'components/Form';
+
+// Стили
+import './style.css';
 
 class Main extends Component {
 

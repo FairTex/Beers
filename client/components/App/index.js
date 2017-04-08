@@ -13,7 +13,7 @@ class App extends Component {
 
     render() {
         return (
-            <div className='viewport'>
+            <div className='container'>
                 <Main className={'main'}/>
                 <Sidebar className={'sidebar'}/>
             </div>
