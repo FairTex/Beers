@@ -7,7 +7,7 @@ export default class ItemWithImage extends Component {
         const buttonClassname = children.isFavorite ? 'item__button button_disabled' : 'item__button';
         return (
             <div className={className}>
-                <image className='item__image' src={children.image} />
+                <img className='item__image' src={children.image} />
                 <h3 className="item__title">{children.title}</h3>
                 <p className="item__description">{children.description}</p>
                 <button className={buttonClassname} onClick = {this.handleClick.bind(this, children)}>

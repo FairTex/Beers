@@ -19,7 +19,7 @@ class Main extends Component {
         return (
             <div className={className}>
                 <Form className={'search-form'}/>
-                <List className={'list'}>
+                <div className={'main__list'}>
                 {
                     beers.map((beer, idx) => {
                         return (
@@ -32,7 +32,7 @@ class Main extends Component {
                         );
                     })
                 }
-                </List>
+                </div>
             </div>
         );
     }

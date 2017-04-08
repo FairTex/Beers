@@ -3,7 +3,7 @@ export const initialStore = {
         id: 1,
         title: 'beer10',
         description: 'the best beer in the world',
-        image: 'containers/List/images/beer.jpg',
+        image: 'http://belive.ru/wp-content/uploads/2016/11/20152407111218.jpg',
         isFavorite: false
     },
     {
