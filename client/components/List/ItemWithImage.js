@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import 'containers/List/style.css';
+import './style.css';
 
 export default class ItemWithImage extends Component {
     render() {

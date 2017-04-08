@@ -6,3 +6,7 @@
     color: #c0c0c0;
     background-color: #ffffff;
 }
+
+.item {
+    border: 1px solid green;
+}

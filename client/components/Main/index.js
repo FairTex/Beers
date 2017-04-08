@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import * as Actions from 'actions';
 
 // Доп. компоненты
-import List from 'containers/List/List';
-import ItemWithImage from 'containers/List/ItemWithImage';
-import Form from 'containers/Form';
+import List from 'components/List/List';
+//import ItemWithImage from 'components/List/ItemWithImage';
+import Form from 'components/Form';
 
 class Main extends Component {
 
@@ -21,12 +21,12 @@ class Main extends Component {
                 {
                     beers.map((beer, idx) => {
                         return (
-                            <ItemWithImage
+                            <List.ItemWithImage
                             key={idx}
                             className={'item item_with_image'}
                             addFavorite={actions.addFavorite}>
                                 {beer}
-                            </ItemWithImage>
+                            </List.ItemWithImage>
                         );
                     })
                 }

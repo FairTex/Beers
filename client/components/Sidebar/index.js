@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import * as Actions from 'actions';
 
 // Дополнительные компоненты
-import List from 'containers/List';
+import List from 'components/List';
 
 // Стили
 import './style.css';
@@ -14,7 +14,7 @@ class Sidebar extends Component {
         const { store: {reducers: {beers, favoriteBeers}}, dispatch, className } = this.props;
         const actions = bindActionCreators(Actions, dispatch);
         return (
-            <List className={className}>
+            <div className={className}>
             {
                 favoriteBeers.map((beer, idx) => {
                     return (
@@ -26,7 +26,7 @@ class Sidebar extends Component {
                     );
                 })
             }
-            </List>
+            </div>
         );
     }
 }
